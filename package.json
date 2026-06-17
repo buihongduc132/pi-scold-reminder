@@ -1,0 +1,55 @@
+{
+  "name": "pi-scold-reminder",
+  "version": "0.0.1",
+  "description": "pi extension that occasionally injects accountability reminders (embedding-match or random) to force agents to self-audit against configured rules",
+  "author": "buihongduc132",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buihongduc132/pi-scold-reminder.git"
+  },
+  "homepage": "https://github.com/buihongduc132/pi-scold-reminder#readme",
+  "bugs": {
+    "url": "https://github.com/buihongduc132/pi-scold-reminder/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "pi-coding-agent",
+    "accountability",
+    "guardrail",
+    "reminder",
+    "self-audit",
+    "llm-behavior"
+  ],
+  "files": [
+    "extensions/**/*.ts",
+    "skills/**/*",
+    "scripts/smoke-test.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check": "npm run typecheck && npm run test:coverage",
+    "smoke-test": "node --experimental-strip-types scripts/smoke-test.ts"
+  },
+  "pi": {
+    "extensions": ["./extensions"],
+    "skills": ["./skills"]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.1",
+    "@vitest/coverage-v8": "^3.2.1",
+    "typescript": "^5.8.0"
+  }
+}

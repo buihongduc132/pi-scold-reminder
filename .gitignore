@@ -1,0 +1,52 @@
+# ─── Dependencies / libs (never commit) ─────────────────────
+node_modules/
+npm/
+package-lock.json
+*.tgz
+.pnpm-store/
+
+# ─── Build output ────────────────────────────────────────────
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# ─── Env / secrets (sensitive — never commit) ───────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+auth.json
+*-keys.json
+*.secret
+credentials.json
+
+# ─── Logs ───────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Test coverage ──────────────────────────────────────────
+coverage/
+.nyc_output/
+.vitest-cache/
+
+# ─── OS / editor ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ─── Pi runtime data (never commit) ─────────────────────────
+.pi/
+sessions/
+session-progress/
+memory/
+mcp-cache.json
+mcp-oauth/
